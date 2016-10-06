@@ -1,9 +1,10 @@
 # Table component with sorting and pagination for Angular2
-[![npm version](https://badge.fury.io/js/angular2-datatable.svg)](https://badge.fury.io/js/angular2-datatable)
-[![Build Status](https://travis-ci.org/mariuszfoltak/angular2-datatable.svg?branch=master)](https://travis-ci.org/mariuszfoltak/angular2-datatable)
-[![Code Climate](https://codeclimate.com/github/mariuszfoltak/angular2-datatable/badges/gpa.svg)](https://codeclimate.com/github/mariuszfoltak/angular2-datatable)
-[![Test Coverage](https://codeclimate.com/github/mariuszfoltak/angular2-datatable/badges/coverage.svg)](https://codeclimate.com/github/mariuszfoltak/angular2-datatable/coverage)
-[![npm downloads](https://img.shields.io/npm/dm/angular2-datatable.svg)](https://npmjs.org/angular2-datatable)
+
+## About this fork
+
+Fork from https://github.com/mariuszfoltak/angular2-datatable
+Compatible with Angular 2.0.1
+Tests and examples are currently not up-to-date.
 
 ## Demo
 
@@ -12,27 +13,37 @@ Check [live demo](http://plnkr.co/edit/tINlfy?p=preview) in plunker
 ## Installation
 
 ```
-npm i -S angular2-datatable
+npm i -S angular2-datatable2
 ```
 
 ## Usage example
 
-app.ts
+app.module.ts
+
+```typescript
+import {DataTableModule} from 'angular2-datatable2/datatable';
+
+@NgModule({
+  imports: [DataTableModule, ...],
+  declarations: [...],
+  exports: [DataTableModule, ...]
+})
+```
+
+app.component.ts
 ```typescript
  import {Component} from '@angular/core';
- import {DataTableDirectives} from 'angular2-datatable/datatable';
 
  @Component({
      selector: 'app',
-     templateUrl: 'app.html',
-     directives: [DataTableDirectives]
+     templateUrl: 'app.component.html'
  })
  export class App {
      private data: any[] = ...
  }
 ```
 
-app.html
+app.component.html
 ```html
 <table class="table table-striped" [mfData]="data" #mf="mfDataTable" [mfRowsOnPage]="5">
     <thead>

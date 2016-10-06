@@ -1,6 +1,6 @@
-export {DataTable, DataEvent, PageEvent, SortEvent} from './lib/DataTable';
-export {DefaultSorter} from './lib/DefaultSorter';
-export {Paginator} from './lib/Paginator';
-export {BootstrapPaginator} from './lib/BootstrapPaginator';
-
-export const DataTableDirectives: any[];
+export { DataTable, DataEvent, PageEvent, SortEvent } from './lib/DataTable';
+export { DefaultSorter } from './lib/DefaultSorter';
+export { Paginator } from './lib/Paginator';
+export { BootstrapPaginator } from './lib/BootstrapPaginator';
+export declare class DataTableModule {
+}
