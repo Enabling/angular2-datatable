@@ -2,6 +2,7 @@ npm-debug.log
 node_modules
 .idea
 *.iml
+/src/*.ngfactory.ts
 /lib
 /src/typings/
 /coverage/
